@@ -1,0 +1,21 @@
+{% block content %}
+<h2>Course Instances</h2>
+<table>
+    <tr>
+        <th>Course Title</th>
+        <th>Year</th>
+        <th>Semester</th>
+        <th>Actions</th>
+    </tr>
+    {% for instance in instances %}
+    <tr>
+        <td>{{ instance.course.title }}</td>
+        <td>{{ instance.year }}</td>
+        <td>{{ instance.semester }}</td>
+        <td>
+            <!-- Add your action buttons here -->
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
